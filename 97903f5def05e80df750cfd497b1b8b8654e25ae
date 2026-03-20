@@ -1,0 +1,23 @@
+README.md
+  2977b0b432be04d8 1-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15",
+  "base_commit_sha": "97903f5def05e80df750cfd497b1b8b8654e25ae",
+  "prompts": {
+    "2977b0b432be04d8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ff32eda1-1588-4835-8575-cafff9569642",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Quan Nguyen <quannguyenminh27082007@gmail.com>",
+      "messages": [],
+      "total_additions": 55,
+      "total_deletions": 0,
+      "accepted_lines": 55,
+      "overriden_lines": 0
+    }
+  }
+}

@@ -138,7 +138,7 @@ gitwhy_post_pr({ "ids": "[\"ctx_a1b2c3d4\"]" })
 
 **CLI:**
 ```bash
-git why push --share
+git why push <context-id> --share
 git why post-pr ctx_a1b2c3d4
 ```
 
@@ -159,8 +159,8 @@ Developers can tell their agent any of these:
 | "What contexts exist in the database domain?" | Agent calls `gitwhy_list(domain="database")` or `git why tree` |
 | "Get the context for ctx_a1b2c3d4" | Agent calls `gitwhy_get(id="ctx_a1b2c3d4")` or `git why get ctx_a1b2c3d4` |
 | "Are there any unsaved commits?" | Agent calls `gitwhy_status` or `git why log` |
-| "Sync my contexts to the cloud" | Agent calls `gitwhy_sync` or `git why push` |
-| "Share my contexts with the team" | Agent calls `gitwhy_publish(ids=...)` or `git why push --share` |
+| "Sync my contexts to the cloud" | Agent calls `gitwhy_sync` or `git why push <context-id>` |
+| "Share my contexts with the team" | Agent calls `gitwhy_publish(ids=...)` or `git why push <context-id> --share` |
 | "Post the context to the PR" | Agent calls `gitwhy_post_pr` or `git why post-pr` |
 
 ## Context Organization

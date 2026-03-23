@@ -21,8 +21,8 @@ GitWhy works via **MCP tools** (if available) or **CLI commands** (always availa
 | `gitwhy_get` | `git why get <id>` | Retrieve context by ID |
 | `gitwhy_search` | `git why search "<query>"` | Search contexts by keyword |
 | `gitwhy_list` | `git why tree` / `git why log` | Browse domain/topic structure |
-| `gitwhy_sync` | `git why push` | Upload to cloud (private) |
-| `gitwhy_publish` | `git why push --share` | Share with team |
+| `gitwhy_sync` | `git why push <context-id>` | Upload to cloud (private) |
+| `gitwhy_publish` | `git why push <context-id> --share` | Share with team |
 | `gitwhy_post_pr` | `git why post-pr` | Post to GitHub PR |
 
 **MCP fallback rule:** If an MCP tool fails or is unavailable, inform the user and use the equivalent CLI command instead. Every MCP operation has a CLI equivalent.
@@ -111,6 +111,6 @@ To retrieve past context:
 - Browse tree: `gitwhy_list()` or `git why tree`
 
 To share with team:
-- Sync to cloud: `gitwhy_sync` or `git why push`
-- Publish: `gitwhy_publish(ids=...)` or `git why push --share`
+- Sync to cloud: `gitwhy_sync` or `git why push <context-id>`
+- Publish: `gitwhy_publish(ids=...)` or `git why push <context-id> --share`
 - Post to PR: `gitwhy_post_pr` or `git why post-pr`

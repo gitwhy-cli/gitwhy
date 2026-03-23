@@ -11,8 +11,8 @@ If any MCP tool returns an error or is unavailable, **fall back to the CLI equiv
 | `gitwhy_search` | `git why search "<query>"` |
 | `gitwhy_list` | `git why tree` or `git why log` |
 | `gitwhy_status` | `git why log` (list contexts) |
-| `gitwhy_sync` | `git why push` |
-| `gitwhy_publish` | `git why push --share` |
+| `gitwhy_sync` | `git why push <context-id>` |
+| `gitwhy_publish` | `git why push <context-id> --share` |
 | `gitwhy_post_pr` | `git why post-pr [ids...]` |
 
 **Important:** Always inform the user when falling back to CLI: "The GitWhy MCP tool encountered an error. Falling back to CLI."
@@ -38,7 +38,7 @@ When using XML format (`<context>` tags), the following tags are **required**:
 
 **Error:** `no API key found — run 'git why setup' to set up`
 
-This occurs when `git why push` or cloud operations cannot find credentials.
+This occurs when `git why push <context-id>` or cloud operations cannot find credentials.
 
 **Fix:**
 1. Run `git why setup`
@@ -78,7 +78,7 @@ gitwhy_save({ "markdown": "...", "repo_root": "/Users/dev/myproject" })
 **Fix:**
 - Check your internet connection
 - Verify API key is valid: `git why setup` (re-enter key if needed)
-- Push is idempotent — safe to retry: `git why push`
+- Push is idempotent — safe to retry: `git why push <context-id>`
 - Local contexts are never lost — they remain in `.git/gitwhy/contexts/`
 
 ## Diagnostic Commands

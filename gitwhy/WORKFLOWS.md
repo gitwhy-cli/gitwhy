@@ -161,7 +161,7 @@ Developers can tell their agent any of these:
 | "Are there any unsaved commits?" | Agent calls `gitwhy_status` or `git why log` |
 | "Sync my contexts to the cloud" | Agent calls `gitwhy_sync` or `git why push <context-id>` |
 | "Share my contexts with the team" | Agent calls `gitwhy_publish(ids=...)` or `git why push <context-id> --share` |
-| "Post the context to the PR" | Agent calls `gitwhy_post_pr` or `git why post-pr` |
+| "Post the context to the PR" | Agent calls `gitwhy_post_pr` or `git why post-pr [context-id...]` |
 
 ## Context Organization
 

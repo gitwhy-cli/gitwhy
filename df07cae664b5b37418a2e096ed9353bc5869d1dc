@@ -1,0 +1,27 @@
+gitwhy/WORKFLOWS.md
+  efb8953a996ab40e 88,94-96,99-108,170-171
+gitwhy/TROUBLESHOOTING.md
+  efb8953a996ab40e 11,90
+gitwhy/SKILL.md
+  efb8953a996ab40e 22,110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.21",
+  "base_commit_sha": "df07cae664b5b37418a2e096ed9353bc5869d1dc",
+  "prompts": {
+    "efb8953a996ab40e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "faac47c2-4b2f-4847-be05-b2cef93843fa",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Quan Nguyen <quannguyenminh27082007@gmail.com>",
+      "messages": [],
+      "total_additions": 20,
+      "total_deletions": 6,
+      "accepted_lines": 20,
+      "overriden_lines": 0
+    }
+  }
+}

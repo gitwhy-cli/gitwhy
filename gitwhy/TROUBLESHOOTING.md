@@ -8,7 +8,7 @@ If any MCP tool returns an error or is unavailable, **fall back to the CLI equiv
 |----------|-------------|
 | `gitwhy_save` | Write content to file, then `git why save --file context.md` |
 | `gitwhy_get` | `git why get <id>` |
-| `gitwhy_search` | `git why search "<query>"` |
+| `gitwhy_search` | `git why search "query"` (with optional `--domain`, `--limit`, `--local-only`, `--no-tui` flags) |
 | `gitwhy_list` | `git why tree` or `git why log` |
 | `gitwhy_status` | `git why log` (list contexts) |
 | `gitwhy_sync` | `git why push <context-id>` |
@@ -87,7 +87,7 @@ gitwhy_save({ "markdown": "...", "repo_root": "/Users/dev/myproject" })
 |---------|--------------|
 | `git why log` | All saved contexts with IDs, dates, titles, agents, domains |
 | `git why tree` | Domain/topic tree structure with context files |
-| `git why search <query>` | Search across context titles, prompts, reasoning, files |
+| `git why search "query"` | Search across context titles, reasoning, file paths, and commit SHAs (ranked results) |
 | `git why get <id>` | Full content of a specific context |
 | `git why --version` | Installed GitWhy version |
 

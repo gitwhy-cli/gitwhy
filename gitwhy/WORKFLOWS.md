@@ -85,14 +85,27 @@ Returns the full structured markdown plus a dashboard URL.
 **MCP:**
 ```json
 gitwhy_search({ "query": "authentication" })
+gitwhy_search({ "query": "billing", "domain": "architecture", "limit": 5 })
 ```
 
 **CLI:**
 ```bash
 git why search "authentication"
+git why search --domain architecture --limit 5 "billing"
+git why search --local-only "migration"
+git why search    # (no query = opens interactive TUI)
 ```
 
-Returns matching contexts with IDs, titles, domains, and dates.
+Returns ranked results with context IDs, titles, snippets, scores, files, commit SHAs, and source (local/cloud/local+cloud).
+
+**Search parameters:**
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `query` | Natural language or specific terms (file paths, function names, commit SHAs) | required |
+| `repo` | Filter to a specific repository (owner/name) | current repo |
+| `domain` | Filter to a specific domain (e.g., 'architecture') | all |
+| `limit` | Max results to return | 10 (max 20) |
 
 ### Browse the Tree
 
@@ -154,7 +167,8 @@ Developers can tell their agent any of these:
 | Prompt | What Happens |
 |--------|-------------|
 | "Save this session with GitWhy" | Agent generates structured context and calls `gitwhy_save` (MCP) or `git why save` (CLI) |
-| "What context do we have on authentication?" | Agent calls `gitwhy_search(query="authentication")` or `git why search "auth"` |
+| "What context do we have on authentication?" | Agent calls `gitwhy_search(query="authentication")` or `git why search "authentication"` |
+| "Find billing contexts in architecture domain" | Agent calls `gitwhy_search(query="billing", domain="architecture")` or `git why search --domain architecture "billing"` |
 | "Show me the context tree" | Agent calls `gitwhy_list()` or `git why tree` |
 | "What contexts exist in the database domain?" | Agent calls `gitwhy_list(domain="database")` or `git why tree` |
 | "Get the context for ctx_a1b2c3d4" | Agent calls `gitwhy_get(id="ctx_a1b2c3d4")` or `git why get ctx_a1b2c3d4` |

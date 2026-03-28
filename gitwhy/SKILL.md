@@ -19,7 +19,7 @@ GitWhy works via **MCP tools** (if available) or **CLI commands** (always availa
 | `gitwhy_status` | `git why log` | Check saved contexts and pending commits |
 | `gitwhy_save` | `git why save --file context.md` | Save structured context |
 | `gitwhy_get` | `git why get <id>` | Retrieve context by ID |
-| `gitwhy_search` | `git why search "<query>"` | Search contexts by keyword |
+| `gitwhy_search` | `git why search "query"` | Search contexts with hybrid full-text search (ranked results with snippets) |
 | `gitwhy_list` | `git why tree` / `git why log` | Browse domain/topic structure |
 | `gitwhy_sync` | `git why push <context-id>` | Upload to cloud (private) |
 | `gitwhy_publish` | `git why push <context-id> --share` | Share with team |
@@ -107,7 +107,7 @@ Context ID, repository, branch, date, domain/topic, and commits are auto-populat
 
 To retrieve past context:
 - By ID: `gitwhy_get(id="ctx_a1b2c3d4")` or `git why get ctx_a1b2c3d4`
-- By search: `gitwhy_search(query="authentication")` or `git why search "auth"`
+- By search: `gitwhy_search(query="authentication")` or `git why search "auth"` — supports `repo`, `domain`, and `limit` filters
 - Browse tree: `gitwhy_list()` or `git why tree`
 
 To share with team:
